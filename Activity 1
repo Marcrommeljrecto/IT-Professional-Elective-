@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class ShortCalculator {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("First number: ");
+        double a = in.nextDouble();
+        System.out.print("Second number: ");
+        double b = in.nextDouble();
+        System.out.print("Operator (+,-,*,/): ");
+        String op = in.next();
+
+        if (op.equals("+")) System.out.println("Result: " + (a + b));
+        else if (op.equals("-")) System.out.println("Result: " + (a - b));
+        else if (op.equals("*")) System.out.println("Result: " + (a * b));
+        else if (op.equals("/")) System.out.println(b == 0 ? "Cannot divide by zero!" : "Result: " + (a / b));
+        else System.out.println("Invalid operator!");
+
+        in.close();
+    }
+}
